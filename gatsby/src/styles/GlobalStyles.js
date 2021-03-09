@@ -3,9 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
 
 :root {
-    --primary: #FF4949;
-    --secondary: #ffc600;
-    --tertiary: #ffc600;
+    --primary: ${props => props.primaryColor.hex};
+    --secondary: ${props => props.secondaryColor.hex};
     --white: #fff;
     --black: #050505;
     --grey: #efefef;

@@ -5,7 +5,14 @@ import styled from 'styled-components';
 const NavStyles = styled.nav`
     ul {
         list-style: none;
-        padding: 0;
+        background: var(--primary);
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    li a {
+        font-size: 2rem;
+        color: var(--secondary);
     }
 
 `;
@@ -13,7 +20,7 @@ const NavStyles = styled.nav`
 export default function Nav() {
 
 	return (
-        <NavStyles className="container pad">
+        <NavStyles className="container ">
             <ul>
                 <li>
                     <Link to="/">Home</Link>

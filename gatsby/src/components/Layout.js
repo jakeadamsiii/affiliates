@@ -13,7 +13,7 @@ export default function Layout({ children, data }) {
     return (
         <>
             <SEO {...settings}/>
-            <GlobalStyles />
+            <GlobalStyles {...settings}/>
             <Nav />
             { children }
             <Footer />
