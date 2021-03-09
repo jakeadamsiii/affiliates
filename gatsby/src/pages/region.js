@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-export default function RegionPage() {
+export default function RegionPage({data}) {
 
 	return (
 		<>
@@ -13,3 +13,30 @@ export default function RegionPage() {
 	);
 }
 
+export const query = graphql`
+	query regionQuery {
+		settings: allSanitySettings {
+			nodes {
+			description
+			id
+			image {
+				asset {
+				fixed(height: 400, width: 400) {
+					base64
+					srcWebp
+					srcSetWebp
+				}
+				}
+			}
+			keywords
+			primaryColor {
+				hex
+			}
+			secondaryColor {
+				hex
+			}
+			title
+			}
+		}
+	}
+`

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-export default function ErrorPage() {
+export default function ErrorPage({data}) {
 
 	return (
 		<>
@@ -12,3 +12,31 @@ export default function ErrorPage() {
 	);
 }
 
+
+export const query = graphql`
+	query errorQuery {
+		settings: allSanitySettings {
+			nodes {
+			description
+			id
+			image {
+				asset {
+				fixed(height: 400, width: 400) {
+					base64
+					srcWebp
+					srcSetWebp
+				}
+				}
+			}
+			keywords
+			primaryColor {
+				hex
+			}
+			secondaryColor {
+				hex
+			}
+			title
+			}
+		}
+	}
+`

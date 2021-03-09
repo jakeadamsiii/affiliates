@@ -9,6 +9,9 @@ import region from "./region";
 import subregion from "./subregion";
 import footer from "./footer";
 import homepage from "./homepage";
+import siteSettings from "./siteSettings";
+
+//objects
 import hero from "./hero";
 import gallery from "./gallery";
 import callToAction from "./callToAction";
@@ -19,5 +22,5 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([logo, region, subregion, homepage, hero, gallery, textWithIllustration, callToAction, footer]),
+  types: schemaTypes.concat([siteSettings, logo, region, subregion, homepage, hero, gallery, textWithIllustration, callToAction, footer]),
 });

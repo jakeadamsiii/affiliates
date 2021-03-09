@@ -6,7 +6,6 @@ import Gallery from '../components/Gallery.js'
 import CTA from '../components/CTA.js'
 import RegionList from '../components/RegionList.js'
 
-import Img from 'gatsby-image';
 
 export default function HomePage({data}) {
 
@@ -127,6 +126,29 @@ export const query = graphql`
 				}
 				tagline
 			}
+			}
+		}
+		settings: allSanitySettings {
+			nodes {
+			description
+			id
+			image {
+				asset {
+				fixed(height: 400, width: 400) {
+					base64
+					srcWebp
+					srcSetWebp
+				}
+				}
+			}
+			keywords
+			primaryColor {
+				hex
+			}
+			secondaryColor {
+				hex
+			}
+			title
 			}
 		}
 	}
