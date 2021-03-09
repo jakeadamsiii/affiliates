@@ -48,5 +48,28 @@ export const query = graphql`
                 }
             }
         }
+        settings: allSanitySettings {
+			nodes {
+			description
+			id
+			image {
+				asset {
+				fixed(height: 400, width: 400) {
+					base64
+					srcWebp
+					srcSetWebp
+				}
+				}
+			}
+			keywords
+			primaryColor {
+				hex
+			}
+			secondaryColor {
+				hex
+			}
+			title
+			}
+		}
 	}
 `
