@@ -14,7 +14,7 @@ export default function RegionPage({data}) {
 }
 
 export const query = graphql`
-	query regionQuery {
+	query vhRegionQuery {
 		settings: allSanitySettings {
 			nodes {
 			description

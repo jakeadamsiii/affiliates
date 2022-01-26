@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{a6Pa:function(e,n,a){"use strict";a.r(n),a.d(n,"default",(function(){return c})),a.d(n,"query",(function(){return u}));var t=a("q1tI"),r=a.n(t);a("9eSz");function c(e){e.data;return r.a.createElement(r.a.Fragment,null,r.a.createElement("section",{className:"container page pad"},r.a.createElement("h1",null,"Region")))}var u="486300162"}}]);
-//# sourceMappingURL=component---src-pages-region-js-86daaa53af80a2a6c288.js.map

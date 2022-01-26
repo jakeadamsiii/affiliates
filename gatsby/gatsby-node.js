@@ -1,4 +1,6 @@
 import path from 'path';
+import fs from 'fs';
+import fse from 'fs-extra';
 
 async function turnRegionsIntoPages({ graphql, actions}) {
 
@@ -69,7 +71,37 @@ async function turnSubregionsIntoPages({ graphql, actions}) {
     });
 }
 
+// post build move public folders
+exports.onPostBuild = function() {
+    fs.renameSync(path.join(__dirname, 'public'), path.join(__dirname, 'public-blog'));
+    fs.mkdirSync(path.join(__dirname, 'public'));
+    fs.renameSync(path.join(__dirname, 'public-blog'), path.join(__dirname, 'public', 'blog'));
+};
 
+exports.onCreateDevServer = function() {
+    if (process.env.APP_ENV === "VH") {
+        // delete src/pages 
+        fse.removeSync(path.join(__dirname, 'src/pages'));
+        // copy src/vh-pages
+        // fse.copySync(path.join(__dirname, 'src/vh-pages'), path.join(__dirname, 'src/tmp/'), function (err) {
+        //     if (err) {                 
+        //       console.error("error: ", err);     
+        //     } else {
+        //       console.log("success!");
+        //     }
+        // });
+        // rename src/vh-pages to src/pages
+        fs.renameSync(path.join(__dirname, 'src/vh-pages'), path.join(__dirname, 'src/pages'));
+        //rename copy of src/vh-pages to src/vh-pages
+    } else if (process.env.APP_ENV === "LWHT") {
+        console.log('hello lwht');
+    }
+}
+
+// pre build move src folders
+exports.onPreBootstrap = function() {
+
+}
 
 export async function createPages(params) {
 

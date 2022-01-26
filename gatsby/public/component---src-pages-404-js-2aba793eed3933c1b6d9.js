@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return c}));var a=t("q1tI"),r=t.n(a);t("Wbzz");function c(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("section",{className:"container page"},r.a.createElement("h1",null,"404 - Oops something went wrong!")))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-2aba793eed3933c1b6d9.js.map

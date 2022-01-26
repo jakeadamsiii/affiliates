@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{a6Pa:function(e,n,a){"use strict";a.r(n),a.d(n,"default",(function(){return r}));var t=a("q1tI"),c=a.n(t);a("Wbzz"),a("9eSz");function r(){return c.a.createElement(c.a.Fragment,null,c.a.createElement("section",{className:"container page pad"},c.a.createElement("h1",null,"Region")))}}}]);
-//# sourceMappingURL=component---src-pages-region-js-15cb8d2b82c8ef957b3b.js.map

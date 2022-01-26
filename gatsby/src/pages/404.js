@@ -14,7 +14,7 @@ export default function ErrorPage({data}) {
 
 
 export const query = graphql`
-	query errorQuery {
+	query vhErrorQuery {
 		settings: allSanitySettings {
 			nodes {
 			description

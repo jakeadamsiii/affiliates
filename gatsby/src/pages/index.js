@@ -37,6 +37,7 @@ export default function HomePage({data}) {
 	return (
 		<>
 			<section className="container page pad">
+				<h1>Villa Holidays</h1>
 				{content}
 				<RegionList regions={regions}></RegionList>
 			</section>
@@ -45,7 +46,7 @@ export default function HomePage({data}) {
 }
 
 export const query = graphql`
-	query homeQuery {
+	query vhHomeQuery {
 		regions: allSanityRegion {
 			nodes {
 				name
